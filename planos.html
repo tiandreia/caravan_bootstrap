@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caravan - Planos</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+  </head>
+  <body>
+    <!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginTitulo" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLoginTitulo">Entre na sua Conta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Não compartilhamos seu E-mail com ninguém!</div>
+              </div>
+              <div class="mb-3">
+                <label for="loginSenha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="loginSenha">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Salvar Login</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+              <div class="form-text text-muted">Esqueci a senha <a href="#">Clique aqui</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fecha Modal -->
+
+    <nav
+      class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow"
+    >
+      <a href="index.html" class="navbar-brand">
+        <img class="mx-4" src="img/caravan.svg" alt="Caravan" />
+      </a>
+
+      <button
+        class="navbar-toggler mx-4"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Abrir navegação"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse mx-4" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Locais
+            </a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="local.html">Califórnia</a>
+              <a class="dropdown-item" href="local.html">Paris</a>
+              <a class="dropdown-item" href="local.html">Dublin</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="planos.html">Planos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLogin">
+            </button>Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-primary ms-md-2" href="inscricao.html"
+              >Inscreva-se</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="container">
+      <div class=" text-center my-5">
+        <span class="h6 d-block">SEU PLANO, SUA VIAGEM</span>
+        <h2 class="display-4 text-primary">Escolha o Plano</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md mb-5">
+          <div class="bg-light rounded p-4 box-shadow">
+            <h2>Gold</h2>
+            <ul class="lista-plano list-unstyled">
+              <li><i class="ph-arrow-right"></i> 30 dias de viagem</li>
+              <li><i class="ph-arrow-right"></i> 3 destinos diferentes</li>
+              <li><i class="ph-arrow-right"></i> Tudo pago pela empresa</li>
+              <li><i class="ph-arrow-right"></i> Ingressos para festas</li>
+            </ul>
+            <form>
+              <div class="form-group">
+                <select id="inputCidades" class="form-select bg-light">
+                  <option selected>Selecione a Cidade</option>
+                  <option>California</option>
+                  <option>Paris</option>
+                  <option>Dublin</option>
+                </select>
+              </div>
+            </form>
+
+            <div class="row mt-4 align-items-center">
+              <div class="col">
+                <a href="inscrição.html" class="btn btn-primary btn-lg btn-block">Comprar Plano</a>
+              </div>
+              <div class="col">
+                <span class="h3">R$ 5.000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md mb-5">
+          <div class="bg-light rounded p-4 box-shadow">
+            <h2>Platinum <span class="badge text-bg-success">Novo</span></h2>
+            <ul class="lista-plano list-unstyled">
+              <li><i class="ph-arrow-right"></i> 60 dias de viagem</li>
+              <li><i class="ph-arrow-right"></i> 6 destinos diferentes</li>
+              <li><i class="ph-arrow-right"></i> Tudo pago pela empresa</li>
+              <li><i class="ph-arrow-right"></i> Ingressos para festas</li>
+            </ul>
+            <form>
+              <div class="form-group">
+                <select id="inputCidades" class="form-select bg-light">
+                  <option selected>Selecione a Cidade</option>
+                  <option>California</option>
+                  <option>Paris</option>
+                  <option>Dublin</option>
+                </select>
+              </div>
+            </form>
+
+            <div class="row mt-4 align-items-center">
+              <div class="col">
+                <a href="inscrição.html" class="btn btn-primary btn-lg btn-block">Comprar Plano</a>
+              </div>
+              <div class="col">
+                <span class="h3">R$ 7.500</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white mt-5">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <h4 class="h6">PÁGINAS</h4>
+            <ul class="list-unstyled">
+              <li><a href="planos.html">Planos</a></li>
+              <li><a href="contato.html">Contato</a></li>
+              <li><a href="inscricao.html">Inscreva-se</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <h4 class="h6">LOCAIS</h4>
+            <ul class="list-unstyled">
+              <li><a href="local.html">California</a></li>
+              <li><a href="local.html">Paris</a></li>
+              <li><a href="local.html">Dublin</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h4 class="h6">DADOS DE CONTATO</h4>
+            <ul class="list-unstyled text-secondary">
+              <li><a></i>caravan@caravan.com.br</a></li>
+              <li><a>21 0000 0000</a></li>
+              <li><a>Segunda à Sexta das 8h às 18hrs</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-2">
+            <h4 class="h6">REDES SOCIAIS</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a class="btn btn-outline-secondary btn-sm btn-block text-center mb-2" href="#" style="max-width: 140px;">Facebook</a>
+              </li>
+              <li>
+                <a class="btn btn-outline-secondary btn-sm btn-block text-center mb-2" href="#" style="max-width: 140px;">Instagram</a>
+              </li>
+              <li>
+                <a class="btn btn-outline-secondary btn-sm btn-block text-center mb-2" href="#" style="max-width: 140px;">Youtube</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-primary text-center py-3">
+        <p class="mb-0">
+          Caravan <i class="ph-copyright"></i> 2017. Alguns direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="node_modules/@popperjs/core/dist/umd/popper.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="node_modules/bootstrap/dist/js/bootstrap.js"
+    ></script>
+    <script 
+      type="text/javascript" src="app.js">
+    </script>
+  </body>
+</html>
